@@ -13,8 +13,12 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
   - name: centos-7.3
+    attributes: { filepath: '/home/vagrant/foo.txt' }
+  - name: win2012r2
+    driver:
+      box: full/win2012r2
+    attributes: { filepath: 'c:\users\vagrant\desktop\foo.txt' }
 
 suites:
   - name: default
